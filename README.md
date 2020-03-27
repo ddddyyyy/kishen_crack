@@ -11,6 +11,11 @@
 - 汉化的时候统一使用utf8编码，需要对游戏本体程序进行编码修改，具体则是对字符转换函数[MultiByteToWideChar](https://docs.microsoft.com/zh-cn/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar?redirectedfrom=MSDN)的编码参数：932改成65001，具体编码表可以参考[微软的api文档](https://docs.microsoft.com/zh-cn/windows/win32/intl/code-page-identifiers)
 -----
 
+- 用到的c++库：zlib，boost，opensll
+- 可以使用vsual studio 的 nuget 包管理工具安装，也可以使用vcpkg工具安装上述的库
+
+-----
+
 # npk文件内容
 
 1. NPK2字符串开头（8个字节）（0x00补齐）
