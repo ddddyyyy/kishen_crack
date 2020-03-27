@@ -7,29 +7,24 @@
 
 const int MAX_FILENAME_LEN = 100;
 
+//选择操作
 int run(int i,char* arg) {
 	switch (i)
 	{
 	case 1:
 	{
-		char *input = new char[MAX_FILENAME_LEN];
-		char *output = new char[MAX_FILENAME_LEN];
+		string input;
+		string output;
 		if (arg == NULL) {
 			cout << "请输入要解包的文件路径（只能是.npk结尾的文件）:" << endl;
-			cin.get();
-			cin.getline(input, MAX_FILENAME_LEN);
+			cin >> input;
 		}
 		else {
 			input = arg;
 		}
 		cout << "请输入解包后的文件的存放路径:（请使用全英文路径）" << endl;
 		cin >> output;
-		if (strlen(output) == 0) {
-			output = (char*)"./kishen";
-		}
-		else {
-			return unpack(input, output);
-		}
+		return unpack(input, output);
 	}
 	break;
 	case 2:
@@ -54,6 +49,16 @@ int run(int i,char* arg) {
 		}
 	}
 		break;
+	case 3:
+	{
+		return unpack("D:/GalGame/機神咆吼デモンベイン/backup/script.npk", "C:/Users/21156/Desktop/kishen");
+	}
+	break;
+	case 4:
+	{
+		return pack("D:/GalGame/機神咆吼デモンベイン/script.npk","C:/Users/21156/Desktop/kishen");
+	}
+	break;
 	default:
 		cout << "输入错误" << endl;
 		break;
@@ -76,4 +81,5 @@ int main(int argc,char* argv[])
 		cin >> i;
 		cout << run(i, NULL) << endl;
 	}
+	system("pause");
 }

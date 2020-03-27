@@ -1,5 +1,14 @@
 #include "unpack.h"
 
+/// 解包函数
+/* 解包流程
+	1. 获得aes256加密的iv向量
+    2. 获得文件个数
+    3. 索引区域大小
+	4. 读取并解密索引区域
+	5. 根据文件个数，遍历读取索引区域
+	6. 根据索引内容，读取文件内容，并将读取到的文件保存
+*/
 int unpack(string pac_file_path, string output_path) {
 	if (output_path[output_path.length() - 1] != '\\' || output_path[output_path.length() - 1] != '/') {
 		output_path.append("/");

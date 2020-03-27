@@ -1,7 +1,15 @@
 #include "pack.h"
 
 
-
+/// 封包函数
+/* 封包流程
+	1. 设置aes256加密的iv向量
+	2. 遍历要封包的文件夹（注意，由于游戏内容的资源文件使用的路径都是写死的，所以封包时候需要保证写入的路径和封包前相同，形如media/xxx）
+	3. 解析文件，生成文件索引信息，需要进行切片或压缩，加密操作，将文件切片数据写入临时文件
+	4. 记录文件总数
+	5. 遍历生成的索引信息，加密并写入文件
+	6. 将文件切片数据追加写入
+*/
 int pack(string npk_name, string root_path) {
 	//replace(npk_name.begin(), npk_name.end(), '\\', '/');
 	//replace(root_path.begin(), root_path.end(), '\\', '/');

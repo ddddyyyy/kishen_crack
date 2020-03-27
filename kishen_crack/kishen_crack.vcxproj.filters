@@ -24,13 +24,13 @@
     <ClCompile Include="ByteUtil.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="SHA256Util.cpp">
+    <ClCompile Include="CompressUtil.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="pack.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="CompressUtil.cpp">
+    <ClCompile Include="SHA256Util.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="unpack.cpp">
@@ -38,22 +38,22 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Constant.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
     <ClInclude Include="AesUtil.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="ByteUtil.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="SHA256Util.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Constant.h">
+    <ClInclude Include="CompressUtil.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="pack.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="CompressUtil.h">
+    <ClInclude Include="SHA256Util.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="unpack.h">
