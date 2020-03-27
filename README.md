@@ -5,12 +5,13 @@
 
 - 游戏引擎为nitroplus
 - 资源包的格式为.npk
+- 资源包采用的格式为NPK2，推测应该是16年之后nitro社采用的新的格式
 - 资源包内的数据采用aes256加密和deflate无头压缩
 - 脚本文件使用的是shift-jis编码，但是其他的系统文件，使用的是utf8
-- 汉化的时候统一使用utf8编码，需要对游戏本体程序进行编码修改，将932改成65001，具体编码表可以参考[微软的api文档](https://docs.microsoft.com/zh-cn/windows/win32/intl/code-page-identifiers)
+- 汉化的时候统一使用utf8编码，需要对游戏本体程序进行编码修改，具体则是对字符转换函数[MultiByteToWideChar](https://docs.microsoft.com/zh-cn/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar?redirectedfrom=MSDN)的编码参数：932改成65001，具体编码表可以参考[微软的api文档](https://docs.microsoft.com/zh-cn/windows/win32/intl/code-page-identifiers)
 -----
 
-# .npk文件内容
+# npk文件内容
 
 1. NPK2字符串开头（8个字节）（0x00补齐）
 2. iv向量（16个字节）
