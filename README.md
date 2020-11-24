@@ -8,7 +8,7 @@
 - 资源包采用的格式为NPK2，推测应该是16年之后nitro社采用的新的格式
 - 资源包内的数据采用aes256加密和deflate无头压缩
 - 脚本文件使用的是shift-jis编码，但是其他的系统文件，使用的是utf8
-- 汉化的时候统一使用utf8编码，需要对游戏本体程序进行编码修改，具体则是对字符转换函数[MultiByteToWideChar](https://docs.microsoft.com/zh-cn/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar?redirectedfrom=MSDN)的编码参数：932改成65001，具体编码表可以参考[微软的api文档](https://docs.microsoft.com/zh-cn/windows/win32/intl/code-page-identifiers)
+- 汉化的时候统一使用utf8编码，需要对游戏本体程序进行编码修改，具体则是对字符转换函数（在游戏初始化的时候调用的）[MultiByteToWideChar](https://docs.microsoft.com/zh-cn/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar?redirectedfrom=MSDN)的编码参数：932改成65001，具体编码表可以参考[微软的api文档](https://docs.microsoft.com/zh-cn/windows/win32/intl/code-page-identifiers)
 -----
 
 - 用到的c++库：zlib，boost，opensll
